@@ -148,7 +148,8 @@ public class Comercio01 {
                                 bono,
                                 adicionalSeguro,
                                 sueldoFinal);
-
+                           }else{
+                        bono = 300;
                     }
                 }
             }

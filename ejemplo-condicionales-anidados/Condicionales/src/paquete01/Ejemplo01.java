@@ -24,7 +24,7 @@ public class Ejemplo01 {
                 + "3. NOT");
         opcion = entrada.nextInt();
         
-        if (opcion > 0 && opcion <= 3) {
+        if (opcion > 0 && opcion <= 3) { // 5>0 && 5 <=3 >> true && false >> false
             if (opcion==1) {
                 System.out.printf("%s\n", "Trabajar con AND");
                 
@@ -44,3 +44,9 @@ public class Ejemplo01 {
     }
 
 }
+
+
+/*
+Para que el usuario pueda demostrar AND  el usuario tendra que ingresar el numero 1 
+(o dependiendo del numero) ya que el operador AND solo devuelve un resultado verdadero
+*/
