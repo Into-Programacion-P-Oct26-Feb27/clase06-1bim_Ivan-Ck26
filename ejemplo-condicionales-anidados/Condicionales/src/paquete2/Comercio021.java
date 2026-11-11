@@ -18,6 +18,7 @@ public class Comercio021 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US); // 10,2 / 10.2
         
+        String nombreComercio; 
         String nombre;
         String apellido;
         int edad;
@@ -33,6 +34,10 @@ public class Comercio021 {
         double adicionalSeguro;
         
         double sueldoFinal; 
+        
+      
+        System.out.println("Ingrese el nombre del comercio por favor");
+        nombreComercio = entrada.nextLine();
         
         System.out.println("Ingrese el nombre por favor");
         nombre = entrada.nextLine();
@@ -55,7 +60,7 @@ public class Comercio021 {
         System.out.println("Ingrese la región del empleado (Sierra, Costa, Oriente, Insular) por favor");
         region = entrada.nextLine();
         
-        
+      
         String regionMinuscula = region.toLowerCase();
         if (regionMinuscula.contains("sierra")) {
             porcentajeSeguro = 10;
@@ -66,10 +71,10 @@ public class Comercio021 {
         } else if (regionMinuscula.contains("insular")) {
             porcentajeSeguro = 30;
         } else {
-            porcentajeSeguro = 8; // Lo ponemos para queel programa puede ser ejecutable 
+            porcentajeSeguro = 8; // Este valor lo ponemos para que pueda coreer el progama
         }
         
-        
+       
         productividad = numeroProductos * coeficiente;
         
         if (productividad <= 30){
@@ -93,7 +98,8 @@ public class Comercio021 {
         adicionalSeguro = (sueldoBasico * porcentajeSeguro) / 100;
         sueldoFinal = adicionalSeguro + bono + sueldoBasico;
         
-        System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
+       
+        System.out.printf("Reporte de Empleado %s\n\n"
                 + "Nombres: %s\n"
                 + "Apellidos: %s\n"
                 + "Edad: %d\n"
@@ -105,6 +111,7 @@ public class Comercio021 {
                 + "Porcentaje de seguro aplicado: %.0f%%\n"
                 + "Adicional del seguro: $%.2f\n\n"
                 + "Sueldo final: $%.2f\n", 
+                nombreComercio,
                 nombre, 
                 apellido,
                 edad,
