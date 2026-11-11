@@ -18,9 +18,9 @@ public class Comercio012 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US); // 10,2 / 10.2
 
+        String nombreComercio; // Variable para el nombre del comercio
         String nombre;
         String apellido;
-        String Comercio;
         int edad;
         double sueldoBasico;
         int numeroProductos;
@@ -33,6 +33,9 @@ public class Comercio012 {
         double adicionalSeguro;
 
         double sueldoFinal;
+
+        System.out.println("Ingrese el nombre del comercio por favor");
+        nombreComercio = entrada.nextLine();
 
         System.out.println("Ingrese el nombre por favor");
         nombre = entrada.nextLine();
@@ -58,7 +61,7 @@ public class Comercio012 {
         if (productividad <= 30) {
             bono = 25; // $25
             sueldoFinal = adicionalSeguro + bono + sueldoBasico;
-            System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
+            System.out.printf("Reporte de Empleado %s\n\n"
                     + "Nombres: %s\n"
                     + "Apellidos: %s\n"
                     + "Edad: %d\n"
@@ -68,6 +71,7 @@ public class Comercio012 {
                     + "\tBono: $%.2f\n"
                     + "Adicional del seguro: $%.2f\n\n"
                     + "Sueldo final: $%.2f\n",
+                    nombreComercio,
                     nombre,
                     apellido,
                     edad,
@@ -82,7 +86,7 @@ public class Comercio012 {
             if (productividad > 30 && productividad < 80) {
                 bono = 50;
                 sueldoFinal = adicionalSeguro + bono + sueldoBasico;
-                System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
+                System.out.printf("Reporte de Empleado %s\n\n"
                         + "Nombres: %s\n"
                         + "Apellidos: %s\n"
                         + "Edad: %d\n"
@@ -92,6 +96,7 @@ public class Comercio012 {
                         + "\tBono: $%.2f\n"
                         + "Adicional del seguro: $%.2f\n\n"
                         + "Sueldo final: $%.2f\n",
+                        nombreComercio,
                         nombre,
                         apellido,
                         edad,
@@ -106,7 +111,7 @@ public class Comercio012 {
                 if (productividad >= 80 && productividad < 200) {
                     bono = 100;
                     sueldoFinal = adicionalSeguro + bono + sueldoBasico;
-                    System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
+                    System.out.printf("Reporte de Empleado %s\n\n"
                             + "Nombres: %s\n"
                             + "Apellidos: %s\n"
                             + "Edad: %d\n"
@@ -116,6 +121,7 @@ public class Comercio012 {
                             + "\tBono: $%.2f\n"
                             + "Adicional del seguro: $%.2f\n\n"
                             + "Sueldo final: $%.2f\n",
+                            nombreComercio,
                             nombre,
                             apellido,
                             edad,
@@ -130,7 +136,7 @@ public class Comercio012 {
                     if (productividad >= 200) {
                         bono = 200;
                         sueldoFinal = adicionalSeguro + bono + sueldoBasico;
-                        System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
+                        System.out.printf("Reporte de Empleado %s\n\n"
                                 + "Nombres: %s\n"
                                 + "Apellidos: %s\n"
                                 + "Edad: %d\n"
@@ -140,6 +146,7 @@ public class Comercio012 {
                                 + "\tBono: $%.2f\n"
                                 + "Adicional del seguro: $%.2f\n\n"
                                 + "Sueldo final: $%.2f\n",
+                                nombreComercio,
                                 nombre,
                                 apellido,
                                 edad,
@@ -149,7 +156,7 @@ public class Comercio012 {
                                 bono,
                                 adicionalSeguro,
                                 sueldoFinal);
-                           }else{
+                    } else {
                         bono = 300;
                     }
                 }
